@@ -1,19 +1,28 @@
 # Laravel Project Task Manager
 
 A simple task manager app built with Laravel 5.4.33
-  
+
+### I am up for hire as a freelancer
+
+I am certified programmer with real-life problem solving experiences. I mainly work as a Senior Software engineer in a local company in Bangladesh but I also work as a freelancer for clients around the world. I do have a team of excellent programmers with whom I work on my freelance projects. You can reach me here: 
+
+* [Connect on LinkedIn](https://www.linkedin.com/in/ashfaqhahmed/)
+
+* [Find me on Twitter](https://twitter.com/ashfaq8495)
+
+
 ### Demo
 [Task Management Demo](http://laraprojectmgmt.herokuapp.com/)
 
 
 ### Demo login info:
-user: demo@test.com <br/>
-pass: demo2020
+user: demo@user.com <br/>
+pass: demo@123
 
 ### How to install 🤔
-(1). Simply [download](https://github.com/jcadima/Laravel-Project-mgmt/archive/master.zip) or clone the repo:
+(1). Simply clone the repo:
 ```
-git clone https://github.com/jcadima/Laravel-Project-mgmt.git
+git clone https://github.com/ashfaqshuvo007/Algotask.git
 ```
 
 (2) Run composer install to get all the dependencies specified in the composer.lock file
@@ -26,8 +35,7 @@ composer install
 php artisan migrate
 ```
 
-(4a) Import database and modify your .env file
-[Task Management DB](https://github.com/jcadima/Laravel-Project-mgmt/blob/master/laraproject.sql)
+(4a) 
 
 **NOTE**: If using MariaDB you might see an error about "key too long", to fix this open:
 ```
@@ -61,9 +69,6 @@ class AppServiceProvider extends ServiceProvider
 
 ```
 
-OR
-
-
 (4b) Run the database seeder:
 
 ```
@@ -77,26 +82,26 @@ The project already includes a UsersTableSeeder.php class with the following:
         App\User::create([
             'admin' => 1,
             'name' => 'Demo User',
-            'email' => 'demo@test.com',
-            'password' => bcrypt('demo2017') 
+            'email' => 'demo@user.com',
+            'password' => bcrypt('demo@123') 
         ]);
 ```
 
 ## If you are using something like Xampp
 (5) open your hosts file:
 ```
-sudo vim /etc/hosts
+sudo nano /etc/hosts
 ```
 and create a new entry for your project:
 ```
-127.0.0.1  laraproject.test
+127.0.0.1  algotask.test
 ```
 
-(6a) open your vhosts file to create a [Virtual host](http://juancadima.com/creating-a-virtual-host-in-xampp-linux/) for this new entry, depending on your system your **httpd-vhosts.conf** might be located in one of the following:
+(6a) open your vhosts file to create a virtual host for this new entry, depending on your system your **httpd-vhosts.conf** might be located in one of the following:
 
 ```
-sudo vim /opt/lampp/etc/httpd.conf  OR
-sudo vim /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf
+sudo nano /opt/lampp/etc/httpd.conf  OR
+sudo nano /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf
 ```
 
 and add at the bottom of the file
@@ -117,55 +122,7 @@ and add at the bottom of the file
 (6b) restart Apache , and you will be able to load the project at the specified dev. URL above, in this case:
 
 ```
-http://laraproject.test
-```
-
-
-## If you are using Homestead
-Note: If you need to install Homestead: 
-[Laravel - Homestead](https://laravel.com/docs/5.7/homestead) <br>
-(7) open your Homestead.yaml file and see if it looks something like:
-```
-ip: "192.168.10.10"
-memory: 2048
-cpus: 1
-provider: virtualbox
-
-authorize: ~/.ssh/id_rsa.pub
-
-keys:
-    - ~/.ssh/id_rsa
-
-folders:
-    - map: ~/www
-      to: /home/vagrant/www
-
-sites:
-    - map: laraproject.test
-      to: /home/vagrant/www/laraproject/public
-                  
-databases:
-    - laraproject
-```
-
-
-(8) open your /etc/hosts and add an entry for this project (note the IP above in the Homestead.yaml file):
-
-```
-# Homestead
-192.168.10.10	laraproject.test
-```
-
-Now launch the Vagrant Box:
-
-```
-vagrant up
-```
-
-(9) Your dev project will be available at:
-
-```
-http://laraproject.test
+http://algotask.test
 ```
 
 
@@ -332,11 +289,4 @@ http://laraproject.test
 * [X] Clean filenames before uploading: blank spaces, dots
 * [X] Add FileManager package for file uploads
 * [X] Add custom class options for uploaded images
-
-### Screenshots
-
-
-![alt AllTasks](https://jcadima.dev/images/projects.png)
-<br/>
-![alt CreateTask](https://jcadima.dev/images/tasks.png)
 
